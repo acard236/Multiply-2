@@ -37,17 +37,27 @@ class ViewController: UIViewController {
         if insertOperationTextField.text == "+" {
             insertNumberLabel = firstNumber + secondNumber
             numberOutputLabel.text = "\(insertNumberLabel)"
+        }
             
     //Subtraction Statement Here
             
-            
+            if insertOperationTextField.text == "-" {
+                insertNumberLabel = firstNumber - secondNumber
+                numberOutputLabel.text = "\(insertNumberLabel)"
+            }
             
     //Multiply Statement Here
-            
+                if insertOperationTextField.text == "*" {
+                    insertNumberLabel = firstNumber * secondNumber
+                    numberOutputLabel.text = "\(insertNumberLabel)"
+                }
             
     
     //Divide Statement Here
-            
+                    if insertOperationTextField.text == "/" {
+                        insertNumberLabel = firstNumber / secondNumber
+                        numberOutputLabel.text = "\(insertNumberLabel)"
+                    }
             
     //Stretch #2
             
@@ -71,11 +81,12 @@ class ViewController: UIViewController {
         
     //Stretch #9
         }
-    }
     
     
     
+    
 
 
 
 
+        
