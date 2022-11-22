@@ -136,6 +136,7 @@
                         <outlet property="insertNumberTwoTextField" destination="9eE-Gh-5pN" id="kD8-ES-C6J"/>
                         <outlet property="insertOperationTextField" destination="ro1-rK-XmG" id="PVf-eP-0MY"/>
                         <outlet property="numberOutputLabel" destination="NIL-BT-eDw" id="j42-BU-XdB"/>
+                        <outlet property="pictureImageView" destination="W2K-BA-5ZT" id="iAz-Wf-YpQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var insertOperationTextField: UITextField!
     @IBOutlet weak var numberOutputLabel: UILabel!
     
+    @IBOutlet weak var pictureImageView: UIImageView!
     
     var firstNumber = 0
     var secondNumber = 0
@@ -60,15 +61,29 @@ class ViewController: UIViewController {
                     if insertOperationTextField.text == "/" {
                         insertNumberLabel = firstNumber / secondNumber
                         numberOutputLabel.text = "\(insertNumberLabel)"
+                        
+                        
+    //Modulus Statement Here
+        if insertOperationTextField.text == "%" {
+            insertNumberLabel = firstNumber % secondNumber
+                numberOutputLabel.text = "\(insertNumberLabel)"
+                        }
                     }
 
       
-    //Stretch #2
-            
+    
     
     //Stretch #3
-            
-            
+        if insertNumberLabel % 2 == 0 {
+            pictureImageView.image = UIImage(named: "LobsterDog")
+        } else if insertNumberLabel % 2 == 1 {
+            pictureImageView.image = UIImage(named: "HeliumDog")
+        }
+    //Stretch #2
+        if numberOutputLabel.text == "64" {
+            pictureImageView.image = UIImage(named: "Rosalina")
+        }
+        
             
     //Stretch #1
         
