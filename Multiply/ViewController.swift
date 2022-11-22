@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var insertOperationTextField: UITextField!
     @IBOutlet weak var numberOutputLabel: UILabel!
     
+    
     var firstNumber = 0
     var secondNumber = 0
     var insertNumberLabel = 0
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
         }
     @IBAction func calculateNumbersButton(_ sender: UIButton) {
         insertNumberOneTextField.resignFirstResponder()
+        
+        
         guard let data = insertNumberOneTextField.text, !data.isEmpty, let numberOne = Int(data) else { return }
         firstNumber = numberOne
         
@@ -58,7 +61,8 @@ class ViewController: UIViewController {
                         insertNumberLabel = firstNumber / secondNumber
                         numberOutputLabel.text = "\(insertNumberLabel)"
                     }
-            
+
+      
     //Stretch #2
             
     
@@ -67,7 +71,12 @@ class ViewController: UIViewController {
             
             
     //Stretch #1
+        
+        func textFieldShouldReturn(_ textfield: UITextField) -> Bool {
             
+            textfield.resignFirstResponder()
+            
+            return true
             
   
             }
@@ -90,3 +99,4 @@ class ViewController: UIViewController {
 
 
         
+}
