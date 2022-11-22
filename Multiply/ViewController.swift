@@ -32,12 +32,44 @@ class ViewController: UIViewController {
         guard let data = insertNumberTwoTextField.text, !data.isEmpty, let numberTwo = Int(data) else { return }
         secondNumber = numberTwo
         
+    //Stretch 5 I Guess
+    //Addition Statement Here
         if insertOperationTextField.text == "+" {
             insertNumberLabel = firstNumber + secondNumber
             numberOutputLabel.text = "\(insertNumberLabel)"
             
+    //Subtraction Statement Here
             
+            
+            
+    //Multiply Statement Here
+            
+            
+    
+    //Divide Statement Here
+            
+            
+    //Stretch #2
+            
+    
+    //Stretch #3
+            
+            
+            
+    //Stretch #1
+            
+            
+  
             }
+    //Stretch #4
+    
+    //Stretch #6
+        
+    //Stretch #7
+        
+    //Stretch #8 (Goes with 7)
+        
+    //Stretch #9
         }
     }
     
