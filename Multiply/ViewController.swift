@@ -12,8 +12,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var insertNumberTwoTextField: UITextField!
     @IBOutlet weak var insertOperationTextField: UITextField!
     @IBOutlet weak var numberOutputLabel: UILabel!
-    
     @IBOutlet weak var pictureImageView: UIImageView!
+    @IBOutlet weak var insertSecondaryNumberOneTextField: UITextField!
+    @IBOutlet weak var insertiSecondaryNumberTwoTextField: UITextField!
+    @IBOutlet weak var insertSecondaryOperationTextField: UITextField!
+    @IBOutlet weak var comparisonOutputLabel: UILabel!
+    @IBOutlet weak var insertSquareRootNumber: UITextField!
+    @IBOutlet weak var squareRootOutputLabel: UILabel!
+    
+    
+    
     
     var firstNumber = 0
     var secondNumber = 0
@@ -25,6 +33,24 @@ class ViewController: UIViewController {
         
    
         }
+    //Stretch #4
+    @IBAction func clearAllButton(_ sender: UIButton) {
+        insertNumberOneTextField.text = ""
+        insertNumberTwoTextField.text = ""
+        insertOperationTextField.text = ""
+        numberOutputLabel.text = "Output"
+        pictureImageView.image = nil
+        insertSecondaryNumberOneTextField.text = ""
+        insertiSecondaryNumberTwoTextField.text = ""
+        insertSecondaryOperationTextField.text = ""
+        comparisonOutputLabel.text = "Comparison Output"
+        insertSquareRootNumber.text = ""
+        squareRootOutputLabel.text = "Output"
+    }
+    
+    
+    
+    //Makes text into numbers
     @IBAction func calculateNumbersButton(_ sender: UIButton) {
         insertNumberOneTextField.resignFirstResponder()
         
@@ -95,7 +121,7 @@ class ViewController: UIViewController {
             
   
             }
-    //Stretch #4
+  
     
     //Stretch #6
         
