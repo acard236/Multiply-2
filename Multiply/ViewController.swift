@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var comparisonOutputLabel: UILabel!
     @IBOutlet weak var insertSquareRootNumber: UITextField!
     @IBOutlet weak var squareRootOutputLabel: UILabel!
+    @IBOutlet weak var sliderLabelOne: UISlider!
+    @IBOutlet weak var sliderLabelTwo: UISlider!
     
     
     
@@ -62,56 +64,56 @@ class ViewController: UIViewController {
         guard let data = insertNumberTwoTextField.text, !data.isEmpty, let numberTwo = Int(data) else { return }
         secondNumber = numberTwo
         
-    //Stretch 5 I Guess
-    //Addition Statement Here
+        //Stretch 5 I Guess
+        //Addition Statement Here
         if insertOperationTextField.text == "+" {
             insertNumberLabel = firstNumber + secondNumber
             numberOutputLabel.text = "\(insertNumberLabel)"
         }
+        
+        //Subtraction Statement Here
+        
+        if insertOperationTextField.text == "-" {
+            insertNumberLabel = firstNumber - secondNumber
+            numberOutputLabel.text = "\(insertNumberLabel)"
+        }
+        
+        //Multiply Statement Here
+        if insertOperationTextField.text == "*" {
+            insertNumberLabel = firstNumber * secondNumber
+            numberOutputLabel.text = "\(insertNumberLabel)"
+        }
+        
+        
+        //Divide Statement Here
+        if insertOperationTextField.text == "/" {
+            insertNumberLabel = firstNumber / secondNumber
+            numberOutputLabel.text = "\(insertNumberLabel)"
             
-    //Subtraction Statement Here
             
-            if insertOperationTextField.text == "-" {
-                insertNumberLabel = firstNumber - secondNumber
+            //Modulus Statement Here
+            if insertOperationTextField.text == "%" {
+                insertNumberLabel = firstNumber % secondNumber
                 numberOutputLabel.text = "\(insertNumberLabel)"
             }
-            
-    //Multiply Statement Here
-                if insertOperationTextField.text == "*" {
-                    insertNumberLabel = firstNumber * secondNumber
-                    numberOutputLabel.text = "\(insertNumberLabel)"
-                }
-            
-    
-    //Divide Statement Here
-                    if insertOperationTextField.text == "/" {
-                        insertNumberLabel = firstNumber / secondNumber
-                        numberOutputLabel.text = "\(insertNumberLabel)"
-                        
-                        
-    //Modulus Statement Here
-        if insertOperationTextField.text == "%" {
-            insertNumberLabel = firstNumber % secondNumber
-                numberOutputLabel.text = "\(insertNumberLabel)"
-                        }
-                    }
-
-      
-    
-    
-    //Stretch #3
+        }
+        
+        
+        
+        
+        //Stretch #3
         if insertNumberLabel % 2 == 0 {
             pictureImageView.image = UIImage(named: "LobsterDog")
         } else if insertNumberLabel % 2 == 1 {
             pictureImageView.image = UIImage(named: "HeliumDog")
         }
-    //Stretch #2
+        //Stretch #2
         if numberOutputLabel.text == "64" {
             pictureImageView.image = UIImage(named: "Rosalina")
         }
         
-            
-    //Stretch #1
+        
+        //Stretch #1
         
         func textFieldShouldReturn(_ textfield: UITextField) -> Bool {
             
@@ -119,18 +121,31 @@ class ViewController: UIViewController {
             
             return true
             
-  
-            }
-  
+            
+        }
+        
+    }
     
     //Stretch #6
+   
+    @IBAction func sliderOneValueChanged(_ sender: UISlider) {
+        var currentValueOne = Int(sender.value)
+        insertNumberOneTextField.text = "\(currentValueOne)"
+        
+    }
+    
+    @IBAction func sliderTwoValueChanged(_ sender: UISlider) {
+        var currentValueTwo = Int(sender.value)
+        insertNumberTwoTextField.text = "\(currentValueTwo)"
+    }
+    
         
     //Stretch #7
         
     //Stretch #8 (Goes with 7)
         
     //Stretch #9
-        }
+        
     
     
     
