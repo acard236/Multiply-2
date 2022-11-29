@@ -17,13 +17,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var insertiSecondaryNumberTwoTextField: UITextField!
     @IBOutlet weak var insertSecondaryOperationTextField: UITextField!
     @IBOutlet weak var comparisonOutputLabel: UILabel!
-    @IBOutlet weak var insertSquareRootNumber: UITextField!
-    @IBOutlet weak var squareRootOutputLabel: UILabel!
     @IBOutlet weak var sliderLabelOne: UISlider!
     @IBOutlet weak var sliderLabelTwo: UISlider!
     @IBOutlet weak var insertVariableOneTextfield: UITextField!
     @IBOutlet weak var insertVariableTwoTextfield: UITextField!
     @IBOutlet weak var insertComparisonTextfield: UITextField!
+    @IBOutlet weak var insertSquareRootNumber: UITextField!
+    @IBOutlet weak var squareRootOutputLabel: UILabel!
     
     
     
@@ -187,7 +187,15 @@ class ViewController: UIViewController {
     //Stretch #8 (Goes with 7)
         
     //Stretch #9
-        
+    @IBAction func squareRootPressed(_ sender: UIButton) {
+        insertSquareRootNumber.resignFirstResponder()
+            guard let data = insertSquareRootNumber.text, !data.isEmpty, let squareRootText = Int(data) else { return }
+            var squareRootBefore: Double = Double(squareRootText)
+            var squareRootAfter = squareRootBefore.squareRoot()
+             squareRootAfter = Double(round(1000 * squareRootAfter) / 1000)
+            squareRootOutputLabel.text = "\(squareRootAfter)"
+    }
+    
     
     
     

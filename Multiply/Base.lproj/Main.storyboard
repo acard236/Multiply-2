@@ -64,13 +64,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Square Root #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFw-Hd-dQ0">
-                                <rect key="frame" x="152" y="711" width="109" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y11-g2-QTf">
                                 <rect key="frame" x="11" y="754" width="124" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -92,7 +85,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEL-TG-C9c">
-                                <rect key="frame" x="143" y="803" width="127" height="31"/>
+                                <rect key="frame" x="144" y="842" width="127" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Clear All"/>
@@ -138,6 +131,15 @@
                                     <action selector="compareVariablesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z6f-4E-BWF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjA-ip-dBu">
+                                <rect key="frame" x="142" y="702" width="120" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Square Root It!"/>
+                                <connections>
+                                    <action selector="squareRootPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wBu-T5-mia"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -150,7 +152,7 @@
                         <outlet property="insertOperationTextField" destination="ro1-rK-XmG" id="PVf-eP-0MY"/>
                         <outlet property="insertSecondaryNumberOneTextField" destination="euX-lA-EvR" id="Ojj-04-eSL"/>
                         <outlet property="insertSecondaryOperationTextField" destination="fWu-mB-0eL" id="Wrs-b4-fob"/>
-                        <outlet property="insertSquareRootNumber" destination="y11-g2-QTf" id="9hC-9l-9jv"/>
+                        <outlet property="insertSquareRootNumber" destination="y11-g2-QTf" id="PFq-3T-nQB"/>
                         <outlet property="insertVariableOneTextfield" destination="euX-lA-EvR" id="l4J-yg-Sj2"/>
                         <outlet property="insertVariableTwoTextfield" destination="RyW-D5-miJ" id="EXH-X2-gzW"/>
                         <outlet property="insertiSecondaryNumberTwoTextField" destination="RyW-D5-miJ" id="eFN-VX-aP0"/>
@@ -158,7 +160,7 @@
                         <outlet property="pictureImageView" destination="W2K-BA-5ZT" id="iAz-Wf-YpQ"/>
                         <outlet property="sliderLabelOne" destination="eqc-6C-jiM" id="wDZ-om-FeT"/>
                         <outlet property="sliderLabelTwo" destination="fat-0w-rry" id="cgY-TF-bpV"/>
-                        <outlet property="squareRootOutputLabel" destination="V6O-K5-gKS" id="KYG-do-gaj"/>
+                        <outlet property="squareRootOutputLabel" destination="V6O-K5-gKS" id="BdQ-LV-Udv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
