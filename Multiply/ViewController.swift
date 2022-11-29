@@ -161,25 +161,31 @@ class ViewController: UIViewController {
         if insertComparisonTextfield.text == ">" {
             if firstVariable > secondVariable {
                 comparisonOutputLabel.text = "True"
+                self.view.backgroundColor = UIColor.red
             }
             if firstVariable < secondVariable {
                 comparisonOutputLabel.text = "False"
+                self.view.backgroundColor = UIColor.orange
             }
         }
         if insertComparisonTextfield.text == "<" {
             if firstVariable < secondVariable {
                 comparisonOutputLabel.text = "True"
+                self.view.backgroundColor = UIColor.yellow
             }
             if firstVariable > secondVariable {
                 comparisonOutputLabel.text = "False"
+                self.view.backgroundColor = UIColor.green
             }
         }
         if insertComparisonTextfield.text == "=" {
             if firstVariable == secondVariable {
                 comparisonOutputLabel.text = "True"
+                self.view.backgroundColor = UIColor.blue
             }
             if firstVariable != secondVariable {
                 comparisonOutputLabel.text = "False"
+                self.view.backgroundColor = UIColor.purple
             }
         }
     }
