@@ -48,14 +48,14 @@ class ViewController: UIViewController {
         insertNumberOneTextField.text = ""
         insertNumberTwoTextField.text = ""
         insertOperationTextField.text = ""
-        numberOutputLabel.text = "Output"
+        numberOutputLabel.text = ""
         pictureImageView.image = nil
         insertSecondaryNumberOneTextField.text = ""
         insertiSecondaryNumberTwoTextField.text = ""
         insertSecondaryOperationTextField.text = ""
-        comparisonOutputLabel.text = "Comparison Output"
+        comparisonOutputLabel.text = ""
         insertSquareRootNumber.text = ""
-        squareRootOutputLabel.text = "Output"
+        squareRootOutputLabel.text = ""
     }
     
     
