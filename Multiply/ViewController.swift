@@ -21,6 +21,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var squareRootOutputLabel: UILabel!
     @IBOutlet weak var sliderLabelOne: UISlider!
     @IBOutlet weak var sliderLabelTwo: UISlider!
+    @IBOutlet weak var insertVariableOneTextfield: UITextField!
+    @IBOutlet weak var insertVariableTwoTextfield: UITextField!
+    @IBOutlet weak var insertComparisonTextfield: UITextField!
+    
     
     
     
@@ -28,6 +32,10 @@ class ViewController: UIViewController {
     var firstNumber = 0
     var secondNumber = 0
     var insertNumberLabel = 0
+    
+    var firstVariable = 0
+    var secondVariable = 0
+    var comparisonVariable = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +72,7 @@ class ViewController: UIViewController {
         guard let data = insertNumberTwoTextField.text, !data.isEmpty, let numberTwo = Int(data) else { return }
         secondNumber = numberTwo
         
-        //Stretch 5 I Guess
+        //Stretch 5
         //Addition Statement Here
         if insertOperationTextField.text == "+" {
             insertNumberLabel = firstNumber + secondNumber
@@ -141,7 +149,41 @@ class ViewController: UIViewController {
     
         
     //Stretch #7
+    @IBAction func compareVariablesButton(_ sender: UIButton) {
+        insertVariableOneTextfield.resignFirstResponder()
+        guard let data = insertVariableOneTextfield.text, !data.isEmpty, let variableOne = Int(data) else { return }
+            firstVariable = variableOne
+            
+            insertVariableTwoTextfield.resignFirstResponder()
+            guard let data = insertVariableTwoTextfield.text, !data.isEmpty, let variableTwo = Int(data) else { return }
+            secondVariable = variableTwo
         
+        if insertComparisonTextfield.text == ">" {
+            if firstVariable > secondVariable {
+                comparisonOutputLabel.text = "True"
+            }
+            if firstVariable < secondVariable {
+                comparisonOutputLabel.text = "False"
+            }
+        }
+        if insertComparisonTextfield.text == "<" {
+            if firstVariable < secondVariable {
+                comparisonOutputLabel.text = "True"
+            }
+            if firstVariable > secondVariable {
+                comparisonOutputLabel.text = "False"
+            }
+        }
+        if insertComparisonTextfield.text == "=" {
+            if firstVariable == secondVariable {
+                comparisonOutputLabel.text = "True"
+            }
+            if firstVariable != secondVariable {
+                comparisonOutputLabel.text = "False"
+            }
+        }
+    }
+    
     //Stretch #8 (Goes with 7)
         
     //Stretch #9

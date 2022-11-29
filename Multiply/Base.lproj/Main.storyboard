@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,13 +46,6 @@
                                 <rect key="frame" x="87" y="291" width="240" height="213"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comparing Numbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5h-a3-0mK">
-                                <rect key="frame" x="122" y="537" width="158" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert #1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="euX-lA-EvR">
                                 <rect key="frame" x="20" y="575" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -130,25 +122,37 @@
                                     <action selector="calculateNumbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d4T-MN-nyd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comparison Output" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wem-4B-Wxh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comparison Output" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wem-4B-Wxh">
                                 <rect key="frame" x="126" y="649" width="150" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55d-BY-wpl">
+                                <rect key="frame" x="129" y="523" width="146" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Compare Variables"/>
+                                <connections>
+                                    <action selector="compareVariablesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z6f-4E-BWF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="comparisonOutputLabel" destination="wem-4B-Wxh" id="eLY-l4-vP5"/>
+                        <outlet property="insertComparisonTextfield" destination="fWu-mB-0eL" id="OW2-ZA-Pd1"/>
                         <outlet property="insertNumberOneTextField" destination="QAI-OF-4xZ" id="l02-J5-b8n"/>
                         <outlet property="insertNumberTwoTextField" destination="9eE-Gh-5pN" id="kD8-ES-C6J"/>
                         <outlet property="insertOperationTextField" destination="ro1-rK-XmG" id="PVf-eP-0MY"/>
                         <outlet property="insertSecondaryNumberOneTextField" destination="euX-lA-EvR" id="Ojj-04-eSL"/>
                         <outlet property="insertSecondaryOperationTextField" destination="fWu-mB-0eL" id="Wrs-b4-fob"/>
                         <outlet property="insertSquareRootNumber" destination="y11-g2-QTf" id="9hC-9l-9jv"/>
+                        <outlet property="insertVariableOneTextfield" destination="euX-lA-EvR" id="l4J-yg-Sj2"/>
+                        <outlet property="insertVariableTwoTextfield" destination="RyW-D5-miJ" id="EXH-X2-gzW"/>
                         <outlet property="insertiSecondaryNumberTwoTextField" destination="RyW-D5-miJ" id="eFN-VX-aP0"/>
                         <outlet property="numberOutputLabel" destination="NIL-BT-eDw" id="j42-BU-XdB"/>
                         <outlet property="pictureImageView" destination="W2K-BA-5ZT" id="iAz-Wf-YpQ"/>
