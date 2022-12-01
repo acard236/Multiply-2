@@ -87,7 +87,9 @@
                                 <rect key="frame" x="131" y="172" width="151" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Calculate Numbers"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Calculate Numbers">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="calculateNumbersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d4T-MN-nyd"/>
                                 </connections>
@@ -100,10 +102,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55d-BY-wpl">
-                                <rect key="frame" x="129" y="599" width="146" height="31"/>
+                                <rect key="frame" x="130" y="602" width="146" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Compare Variables"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Compare Variables">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="compareVariablesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z6f-4E-BWF"/>
                                 </connections>
@@ -144,10 +148,12 @@
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjA-ip-dBu">
-                                <rect key="frame" x="140" y="778" width="120" height="31"/>
+                                <rect key="frame" x="141" y="781" width="120" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Square Root It!"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Square Root It!">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="squareRootPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wBu-T5-mia"/>
                                 </connections>
@@ -156,7 +162,9 @@
                                 <rect key="frame" x="155" y="838" width="91" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Clear All"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Clear All">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="clearAllButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqN-Sg-bng"/>
                                 </connections>
