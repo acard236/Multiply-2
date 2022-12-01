@@ -100,9 +100,9 @@ class ViewController: UIViewController {
             
             
             //Modulus Statement Here
-            if insertOperationTextField.text == "%" {
-                insertNumberLabel = firstNumber % secondNumber
-                numberOutputLabel.text = "\(insertNumberLabel)"
+        if insertOperationTextField.text == "%" {
+            insertNumberLabel = firstNumber % secondNumber
+            numberOutputLabel.text = "\(insertNumberLabel)"
             }
         }
         
